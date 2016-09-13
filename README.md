@@ -1,6 +1,18 @@
 # Subscribe
 A Concierge KPM module for syncing messages between different threads.
 
+## Installing
+#### KPM
+```
+/kpm install subscribe
+```
+
+#### Manual
+```
+git clone https://github.com/concierge/subscribe.git modules/subscribe
+node main.js
+```
+
 ## Commands
 Within this documentation, the `commandPrefix` is assumed to be `/`. This should be changed as appropriate for your configuration.
 
@@ -10,9 +22,10 @@ Within this documentation, the `commandPrefix` is assumed to be `/`. This should
 - `/subscribe remove write <channelName>` - Stops this thread from being a writer on channel `<channelName>`.
 - `/subscription-list` - Lists all channels that the current thread is subscribed to (either as a reader or writer).
 - `/reply <channelName> <message...>` - If the current thread is a reader in channel `<channelName>`, this command will send the message `<message...>` to the threads of all writers subscribed to channel `<channelName>`.
+- `/help subscribe` - basic help that recommends you look at this readme.
 
 ## Configuration Options
-
+Add the following to this modules `config.json` to configure it.
 - `messagePrefix` - The text to show before forwarded messages. By default, if not provided this string will be ''. This is a string that can contain any of these special substrings:
 	- `{{thread_id}}` - will be replaced with the unique thread ID.
 	- `{{sender_id}}` - will be replaced with the unique sender ID.
