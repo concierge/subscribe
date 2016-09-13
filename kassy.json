@@ -1,0 +1,11 @@
+{
+    "name": "subscribe",
+    "version": 1.0,
+    "help": [
+        ["{{commandPrefix}}subscribe [add|remove] [read|write] <channel>", "Allows repeating of messages between integrations and threads.",
+        "Allows repeating of messages between integrations and threads. NOTE: Does not take into account security - security through obscurity by having complicated channel names and no way to list the existing channels that have not been subscribed to. Review README.md for more detail."],
+        ["{{commandPrefix}}reply <channel> message", "Responds to a message in a subscribed read channel.", "Responds to a message in a subscribed read channel. Review README.md for more detail."],
+        ["{{commandPrefix}}subscription-list", "List all of the channels that this thread is subscribed to.", "List all of the channels that this thread is subscribed to. Review README.md for more detail."]
+    ],
+	"startup": "subscribe.js"
+}
